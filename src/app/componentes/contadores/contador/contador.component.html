@@ -1,0 +1,18 @@
+
+<h1>{{title}}</h1>
+<br>
+<button (click)="sumar()">Sumar</button>
+<button (click)="restar()">restar</button>
+
+<!--Vemos como pasar parametros-->
+<button (click)="acomular(5)">+5</button>
+<button (click)="acomular(-5)">-5</button>
+
+<span>{{contador}}</span>
+
+<br>
+
+<h2>La base es <strong>{{contadorBase}}</strong></h2>
+
+<button (click)="acomuladorBase(base)">{{base}}</button>
+<button (click)="acomuladorBase(-base)">-{{base}}</button>

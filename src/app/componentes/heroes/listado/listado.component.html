@@ -1,0 +1,23 @@
+<h1>Listado de heroes</h1>
+
+<!--Vemos como utlizar el if con else y vemos que ocupamos referentias locales-->
+<div *ngIf="borrado; else noborrado">
+    <h3>Hereo borrado</h3>
+    <span>{{heroeBorrado}}</span>
+</div>
+
+<!--Bueno aqui vemos la referencias locales en este caso es #noborrado-->
+<ng-template #noborrado>
+<h3>No ha borrado nada.</h3>
+</ng-template>
+<!--La referencia local se va poder indentificar por el signo de #-->
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<!--La DIRECTIVA NGFOR es una directiva ESTRUTURAL-->
+<ul>
+    <li *ngFor="let heroe of heroes;let i = index">
+        {{i+1}} -  {{heroe}}
+    </li>
+</ul>
+

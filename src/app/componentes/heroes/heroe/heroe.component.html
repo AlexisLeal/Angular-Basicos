@@ -1,0 +1,22 @@
+<dl>
+    <td>Nombre:</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{edad}}</dd>
+
+    <td>funcion:</td>
+    <dd>{{obtenerNombre()}}</dd>
+
+    <td>Capatilizado:</td>
+    <!--Vemos como es un getter no se declara como un funcion tradicional-->
+    <dd>{{nombreCapitalizado}}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+    cambiar heroe
+</button>
+
+<button (click)="cambiarEdad()">
+    cambiar edad
+</button>

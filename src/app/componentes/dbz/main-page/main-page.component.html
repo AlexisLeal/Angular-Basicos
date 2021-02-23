@@ -1,0 +1,65 @@
+<p>Dragon Ball Z</p>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!--ComponenteHijo-->
+        <!--Aqui es donde sucede la magia de componente padre y hijo -->
+        <app-personajes > 
+            <!--[personajes] = "personajes" ese estaba arriba antes se quito por que se agregro el servicio-->
+            <!--[] le estamos diciendo que vamos asociarlo con un componete  de nuestra clase
+            [] adentro va el nombre de la propiedad de la clase hijo en este caso personajes.component 
+            = "" y esto se le pone la propiedad de nuestra clase padre en este caso main-page.component-->
+        </app-personajes>
+      <!--  <h3>Personajes</h3>
+        <hr>
+        <ul *ngFor="let personaje of personajes">
+            <li>{{personaje.nombre}} - {{personaje.poder | number}}</li>
+            | se el conoce como pipes en angular y sirve para tranforma visualmente la informacion
+        </ul> -->
+    </div>
+
+
+    <div class="col">
+       <!--
+        <h3>Agregar</h3>
+        <hr>
+         Existe todos tipos de formularios los tradicionales(con los que trabajs con php o c#) y los reactivos que son para spa
+        Llamamos a un evento de formModule para que se vuelta reativo
+        <form (ngSubmit)="agregar()">
+            <input type="text" 
+            placeholder="Personaje"
+            name="nombre"
+            [(ngModel)]="nuevo.nombre"
+            >
+            [()] -> tanto emite y recive eventos, propiedades 
+                cuando esta asi le decimos que queremos escuchar y emitir el evento y el evento me interesa que caiga en la propiedad
+            nuevo nombre osea lo hace como el input cambia en tiempo real
+            [value]="nuevo.nombre"
+                (input)= "Cambiarnombre($event) cada vez que se introduce un valor hay un change y llama a la funcion"
+            Lo que hacemos con las llaves cuardrasdas es indicar que en nuesto componente hay una propiedad
+            hay una variable hay algun valor en cual yo quiero enlazar directamente
+
+            <input type="number" 
+            placeholder="Poder"
+            name="poder"
+            [(ngModel)]="nuevo.poder"
+           >
+           [value]="nuevo.poder"
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+    -->
+   <app-agregar>
+   </app-agregar>
+   <!-- (onNuevoPersonaje)="agregarNuevoPersonaje($event)" este estaba arriba se quito por que se agregro el servicio-->
+   <!--[personajes] ="personajes" este iba en app-agregar y era para un input
+     (onNuevoPersonaje)="agregarNuevoPersonaje()" esta es para el output cuando se genenere el evento OnNuevoPersonaje 
+     llamara ala funcion agregarNuevoPersonaje passando la data con el parametro por default llamado $event
+
+     Nota EVENT RECUERDA cuando se emite un evento y necesitamos las caracteristicas en el lugar que se hizo click 
+     los valores del input o traget  es con $event como parametro 
+    -->
+    </div>
+</div>

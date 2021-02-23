@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ContadoresModule } from './componentes/contadores/contadores.module';
+import { DbzModule } from './componentes/dbz/dbz.module';
 //import { ContadorComponent } from './componentes/contadores/contador/contador.component';
 import { HeroesModule } from './componentes/heroes/heroes.module';
 //import { HeroeComponent } from './componentes/heroes/heroe/heroe.component';
@@ -21,6 +22,7 @@ import { HeroesModule } from './componentes/heroes/heroes.module';
     BrowserModule,
     HeroesModule,
     ContadoresModule,
+    DbzModule,
   ],
   //en providers van los servicios
   providers: [],
